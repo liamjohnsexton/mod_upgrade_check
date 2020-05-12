@@ -1,0 +1,10 @@
+{
+  "description": "Grabs all the roles and profiles from a given code environment",
+  "input_method": "environment",
+  "parameters": {
+    "code_environment" : {
+      "description": "The code environment in which you want to extract the roles and profiles from",
+      "type": "String[1]"
+    }
+  }
+}

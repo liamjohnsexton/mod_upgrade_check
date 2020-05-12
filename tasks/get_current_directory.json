@@ -1,0 +1,5 @@
+{
+    "description": "Grabs the current directory task is being run from",
+    "input_method": "stdin"
+  }
+  

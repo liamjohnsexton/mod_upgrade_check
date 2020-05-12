@@ -1,0 +1,67 @@
+{
+  "name": "liamjohnsexton-mod_upgrade_check",
+  "version": "0.2.0",
+  "author": "Liam Sexton",
+  "summary": "This bolt plan assesses the complexity of modules installed on the Pupet Master.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/liamjohnsexton/mod_upgrade_check",
+  "project_page": "https://github.com/liamjohnsexton/mod_upgrade_check",
+  "issues_url": "https://github.com/liamjohnsexton/mod_upgrade_check",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04"
+      ]
+    },
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2019",
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.16.0",
+  "template-url": "pdk-default#1.16.0",
+  "template-ref": "tags/1.16.0-0-gaf44904"
+}
