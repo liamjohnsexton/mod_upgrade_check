@@ -4,9 +4,13 @@
   "author": "Liam Sexton",
   "summary": "This bolt plan assesses the complexity of modules installed on the Pupet Master.",
   "license": "Apache-2.0",
+<<<<<<< HEAD
   "source": "https://github.com/liamjohnsexton/mod_upgrade_check",
   "project_page": "https://github.com/liamjohnsexton/mod_upgrade_check",
   "issues_url": "https://github.com/liamjohnsexton/mod_upgrade_check",
+=======
+  "source": "",
+>>>>>>> 901fbd2dc93c6f2a4b5b69b9950ecbc94a204e01
   "dependencies": [
 
   ],
