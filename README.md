@@ -1,9 +1,5 @@
 # mod_upgrade_check
 
-Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules.html .
-
-The README template below provides a starting point with details about what information to include in your README.
-
 #### Table of Contents
 
 1. [Description](#description)
@@ -11,77 +7,46 @@ The README template below provides a starting point with details about what info
     * [What mod_upgrade_check affects](#what-mod_upgrade_check-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with mod_upgrade_check](#beginning-with-mod_upgrade_check)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Limitations - OS compatibility, etc.](#limitations)
-5. [Development - Guide for contributing to the module](#development)
+3. [Usage](#usage)
+4. [Limitations](#limitations)
+5. [Development](#development)
 
 ## Description
 
-Briefly tell users why they might want to use your module. Explain what your module does and what kind of problems users can solve with it.
-
-This should be a fairly short description helps the user decide if your module is what they want.
+Knowing the complexity of the modules installed on your Puppet estate is essential to any successful Puppet migration. This provides information about the modules contained in each of your code environments.
 
 ## Setup
 
-### What mod_upgrade_check affects **OPTIONAL**
+### What mod_upgrade_check affects
 
-If it's obvious what your module touches, you can skip this section. For example, folks can probably figure out that your mysql_instance module affects their MySQL instances.
+This module does not affect any of your Puppet estate. It simply reads the Puppet master and outputs its observations to CSV files.
 
-If there's more that they should know about, though, this is the place to mention:
+### Setup Requirements
 
-* Files, packages, services, or operations that the module will alter, impact, or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled, another module, etc.), mention it here.
-
-If your most recent release breaks compatibility or requires particular steps for upgrading, you might want to include an additional "Upgrading" section here.
+Please ensure you have the credentials to log into the root of the Puppet master of your estate.
 
 ### Beginning with mod_upgrade_check
 
-The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
+The bolt plan: "grab_module_info" is the only item that needs to be run in order to obtain module complexity for each code environment. The CSV files that come from each task that is run are outputted to folders named after each code environment.
 
 ## Usage
 
-Include usage examples for common use cases in the **Usage** section. Show your users how to use your module to solve problems, and be sure to include code examples. Include three to five examples of the most important or common tasks a user can accomplish with your module. Show users how to accomplish more complex tasks that involve different types, classes, and functions working in tandem.
-
-## Reference
-
-This section is deprecated. Instead, add reference information to your code as Puppet Strings comments, and then use Strings to generate a REFERENCE.md in your module. For details on how to add code comments and generate documentation with Strings, see the Puppet Strings [documentation](https://puppet.com/docs/puppet/latest/puppet_strings.html) and [style guide](https://puppet.com/docs/puppet/latest/puppet_strings_style.html)
-
-If you aren't ready to use Strings yet, manually create a REFERENCE.md in the root of your module directory and list out each of your module's classes, defined types, facts, functions, Puppet tasks, task plans, and resource types and providers, along with the parameters for each.
-
-For each element (class, defined type, function, and so on), list:
-
-  * The data type, if applicable.
-  * A description of what the element does.
-  * Valid values, if the data type doesn't make it obvious.
-  * Default value, if any.
-
-For example:
-
+To run this module, run the following command while logged into your Puppet master as root:
+ 
+``` puppet
+bolt plan run mod_upgrade_check::grab_module_info --targets localhost
 ```
-### `pet::cat`
 
-#### Parameters
+The CSV files produced are saved into folders for each code environment. 
 
-##### `meow`
-
-Enables vocalization in your cat. Valid options: 'string'.
-
-Default: 'medium-loud'.
-```
+**These folders are created in the the directory you have run the command from.**
 
 ## Limitations
 
-In the Limitations section, list any incompatibilities, known issues, or other warnings.
+As mentioned previously, the plan **can only be run from the root of the Puppet master** in order to obtain full value from the module.
 
 ## Development
 
 In the Development section, tell other users the ground rules for contributing to your project and how they should submit their work.
 
-## Release Notes/Contributors/Etc. **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You can also add any additional sections you feel are necessary or important to include here. Please use the `## ` header.
+For any assistance in using or understanding this module, please contact: liam.sexton@puppet.com
