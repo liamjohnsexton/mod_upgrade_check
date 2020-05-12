@@ -2,10 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 0.2.2
+
+**Features**
+*Updated the overview and changelog documentation.
+
+
+
+
 ## Release 0.2.1
 
 **Features**
-*Added documentation in the readme and updated changelog
+*Full functionality is now available.
 
 **Bug fixes**
 *Now able to run bolt plan properly.
@@ -19,6 +27,7 @@ All notable changes to this project will be documented in this file.
 
 **Known Issues**
 *Still issues surroding the execution of the bolt plan.
+
 
 
 
