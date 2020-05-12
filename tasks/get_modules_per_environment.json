@@ -1,0 +1,12 @@
+{
+  "description": "Grabs all the modules from a given code environment",
+  "input_method": "environment",
+  "parameters": {
+    "code_environment" : {
+      "description": "The code environment in which you want to extract a list of modules from",
+      "type": "String[1]"
+    }
+  }
+}
+
+

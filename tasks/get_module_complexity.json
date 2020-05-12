@@ -1,0 +1,10 @@
+{
+  "description": "This task extracts the number of lines of code and words for each module in a given code environment",
+  "input_method": "environment",
+  "parameters": {
+    "code_environment": {
+      "description": "Provide code environment of Puppet Estate",
+      "type": "String[1]"
+    }
+  }
+}
