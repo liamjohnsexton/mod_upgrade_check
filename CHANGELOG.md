@@ -2,11 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 0.3
+
+**Features**
+*Bolt plan now creates folders and writes CSV files to a local workstation that plan is run from.
+*Functionality changed to target Puppet master rather than be run from it.
+
 ## Release 0.2.2
 
 **Features**
 *Updated the overview and changelog documentation.
-
 
 
 

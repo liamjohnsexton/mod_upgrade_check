@@ -1,8 +1,8 @@
 {
   "name": "liamjohnsexton-mod_upgrade_check",
-  "version": "0.2.2",
+  "version": "0.3",
   "author": "Liam Sexton",
-  "summary": "This bolt plan assesses the complexity of modules installed on the Pupet Master.",
+  "summary": "This bolt plan assesses the complexity of modules installed on the Pupet master.",
   "license": "Apache-2.0",
   "source": "https://github.com/liamjohnsexton/mod_upgrade_check",
   "project_page": "https://github.com/liamjohnsexton/mod_upgrade_check",
