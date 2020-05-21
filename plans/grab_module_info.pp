@@ -12,11 +12,11 @@ plan mod_upgrade_check::grab_module_info (
 
   $code_environments_array.each |String $current_code_environment| {
 
-    $target_directory = "${workstation_directory_split[0]}/${current_code_environment}_environment_information/module_per_${current_code_environment}.csv"
+    $target_directory = "${workstation_directory_split[0]}/${current_code_environment}_environment_information/modules_in_${current_code_environment}.csv"
     $modules = run_task('mod_upgrade_check::get_modules_per_environment', $nodes, code_environment => $current_code_environment)
     $modules_split = $modules[0]
     run_task('mod_upgrade_check::mkdir_p_file','localhost', path => $target_directory, content => $modules_split.message)
-    
+
     $module_complexities = run_task('mod_upgrade_check::get_module_complexity', $nodes, code_environment => $current_code_environment)
     $mod_complexity_split = $module_complexities[0]
     file::write("${workstation_directory_split[0]}/${current_code_environment}_environment_information/module_comeplxity_for_${current_code_environment}.csv", $mod_complexity_split.message)
