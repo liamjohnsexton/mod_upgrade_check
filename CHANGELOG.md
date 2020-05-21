@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## Release 0.3
+## Release 0.3.1
+
+**Features**
+*Changed the name of one of the outputs produced.
+
+## Release 0.3.0
 
 **Features**
 *Bolt plan now creates folders and writes CSV files to a local workstation that plan is run from.

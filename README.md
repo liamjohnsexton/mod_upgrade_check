@@ -31,10 +31,10 @@ The bolt plan: "grab_module_info" is the only item that needs to be run in order
 
 ## Usage
 
-To run this module, run the following command from your local workstation, with the Puppet master being your target
+To run this module, run the following command from your local workstation, with the Puppet master being your target:
  
 ``` puppet
-bolt plan run mod_upgrade_check::grab_module_info --targets <insert Puppet master location here>
+bolt plan run mod_upgrade_check::grab_module_info --targets <fqdn of PE_master> --user <username> --private-key <key> --run-as root
 ```
 
 The CSV files produced are saved into folders for each code environment to your local workstation. 
